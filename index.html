@@ -5,10 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width initial-scale=1.0" />
     <title>포트폴리오</title>
+    <!-- reset -->
     <link rel="stylesheet" href="./common/minireset.min.css">
+    <!-- fonts -->
     <link rel="stylesheet" href="./styles/fonts.css">
+    <!-- 내가 작성한 css, js -->
     <link rel="stylesheet" href="./styles/index.css">
     <script defer src="./js/index.js"></script>
+    <!-- AOS 라이브러리 불러오기 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
 
   <body>
@@ -85,55 +91,66 @@
         </section>
 
         <!-- skills -->
-        <section class="skills">
-          <div class="sub_gnb">
-            <h3>MY SKILL'S<span>.</span></h3> 
-          </div>
-          <ul class="skill_list">
-            <li class="ani1">
-              <h3>01</h3>
-              <h4>HTML5 & CSS3</h4>
-              <ul class="skill_txt">
-                <li>웹사이트 구축</li>
-                <li>웹표준&웹접근성을 고려하여 시맨틱태그 코드 작성</li>
-              </ul>
-            </li>
-            <li class="ani2">
-              <h3>02</h3>
-              <h4>Javascript(ES6+)</h4>
-              <ul class="skill_txt">
-                <li>웹사이트 구현</li>
-                <li>이벤트 메소드 구현</li>
-                <li>PlugIn 사용</li>
-              </ul>
-            </li>
-            <li class="ani3">
-              <h3>03</h3>
-              <h4>React</h4>
-              <ul class="skill_txt">
-                <li>함수 컴포넌트 사용</li>
-                <li>styled-components를 이용한 스타일 구성</li>
-                <li>Router, useState 사용</li>
-              </ul>
-            </li>
-            <li class="ani4">
-              <h3>04</h3>
-              <h4>Photoshop & Illustrator & Figma</h4>
-              <ul class="skill_txt">
-                <li>이미지 편집 및 수정</li>
-                <li>UI & UX를 고려한 디자인</li>
-                <li>그라디언트 적용, GIF 제작, 포토샵&일러스트 도구 사용</li>
-              </ul>
-            </li>
-            <li class="ani5">
-              <h3>05</h3>
-              <h4>Git & GitHub</h4>
-              <ul class="skill_txt">
-                <li>Git으로 코드 버전 관리 GitHub로 협업 가능</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
+          <section class="skills">
+            <div class="sub_gnb">
+              <h3>MY SKILL'S<span>.</span></h3> 
+            </div>
+
+            <ul class="skill_list">
+              <div data-aos="fade-right">
+                <li>
+                  <h3>01</h3>
+                  <h4>HTML5 & CSS3</h4>
+                  <ul class="skill_txt">
+                    <li>웹사이트 구축</li>
+                    <li>웹표준&웹접근성을 고려하여 시맨틱태그 코드 작성</li>
+                  </ul>
+                </li>
+              </div>
+              <div data-aos="fade-right">
+                <li>
+                  <h3>02</h3>
+                  <h4>Javascript(ES6+)</h4>
+                  <ul class="skill_txt">
+                    <li>웹사이트 구현</li>
+                    <li>이벤트 메소드 구현</li>
+                    <li>PlugIn 사용</li>
+                  </ul>
+                </li>
+              </div>
+              <div data-aos="fade-right">
+                <li>
+                  <h3>03</h3>
+                  <h4>React</h4>
+                  <ul class="skill_txt">
+                    <li>함수 컴포넌트 사용</li>
+                    <li>styled-components를 이용한 스타일 구성</li>
+                    <li>Router, useState 사용</li>
+                  </ul>
+                </li>
+              </div> 
+              <div data-aos="fade-right">
+                <li>
+                  <h3>04</h3>
+                  <h4>Photoshop & Illustrator & Figma</h4>
+                  <ul class="skill_txt">
+                    <li>이미지 편집 및 수정</li>
+                    <li>UI & UX를 고려한 디자인</li>
+                    <li>그라디언트 적용, GIF 제작, 포토샵&일러스트 도구 사용</li>
+                    </ul>
+                  </li>
+                </div>
+                <div data-aos="fade-right">
+                    <li>
+                    <h3>05</h3>
+                    <h4>Git & GitHub</h4>
+                    <ul class="skill_txt">
+                      <li>Git으로 코드 버전 관리 GitHub로 협업 가능</li>
+                    </ul>
+                  </li>
+                </div>
+            </ul>  
+          </section>
 
         <!-- about -->
         <section class="about">
@@ -175,5 +192,8 @@
           </li>
         </ul>
     </div>
+    <script> 
+      AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
+  </script>
   </body>
 </html>

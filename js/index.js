@@ -31,7 +31,7 @@ const once = setTimeout(() => {
   myName.classList.add("active");
 }, 2000);
 
-// 슬라이드
+// 슬라이더
 const slider = document.querySelector(".slider_inner");
 const progressBar = document.querySelector(".progress_bar_inner");
 
@@ -70,23 +70,6 @@ function getScrollPercentage() {
   );
 }
 
-// skills skill_list 각각 애니메이션
-const ani1 = document.querySelector(".skill_list .ani1");
-const ani2 = document.querySelector(".skill_list .ani2");
-const ani3 = document.querySelector(".skill_list .ani3");
-const ani4 = document.querySelector(".skill_list .ani4");
-const ani5 = document.querySelector(".skill_list .ani5");
-addEventListener("scroll", () => {
-  let value = window.scrollY;
-  if (value > 1200) {
-    ani1.style.animation = "mov 0.6s ease";
-    ani2.style.animation = "mov 0.75s ease";
-    ani3.style.animation = "mov 0.8s ease";
-    ani4.style.animation = "mov 0.95s ease";
-    ani5.style.animation = "mov 1.5s ease";
-  }
-});
-
 // about text 타이핑
 let text =
   "꾸준히 노력하고, 포기하지 않으며, 도전정신이 있는 프론트엔드 개발자";
@@ -95,11 +78,7 @@ const about = document.querySelector(".about");
 window.addEventListener("scroll", () => {
   const getAbout = about.offsetTop;
   const scrollY = window.scrollY;
-  // console.log(getAbout);
   if (scrollY >= getAbout) {
-    // function resetTyping() {
-    //   document.getElementById("text").innerHTML = "";
-    // }
     function typing() {
       if (i < text.length) {
         document.getElementById("text").innerHTML += text.charAt(i);
@@ -143,7 +122,6 @@ dots.forEach((item) => {
     this.classList.add("on");
   });
 });
-
 // dots 누르면 해당 파트 이동
 dots.forEach((dot, idx) => {
   dot.addEventListener("click", (e) => {
@@ -155,7 +133,6 @@ dots.forEach((dot, idx) => {
     });
   });
 });
-
 // dots 스크롤에 따른 각 색깔,모양 변경
 window.addEventListener("scroll", () => {
   dots.forEach((dot, idx) => {
@@ -169,7 +146,6 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-
 // 마지막 dot 노랑색으로 변경
 window.addEventListener("scroll", () => {
   const getAbout = sections[3].offsetTop - 300;
