@@ -43,15 +43,15 @@ slider.parentElement.addEventListener("scroll", (e) => {
 });
 slider.addEventListener("mousedown", (e) => {
   sliderGrabbed = true;
-  slider.style.cursor = "grabbing";
+  // slider.style.cursor = "grabbing";
 });
 slider.addEventListener("mouseup", (e) => {
   sliderGrabbed = false;
-  slider.style.cursor = "grab";
+  // slider.style.cursor = "grab";
 });
 slider.addEventListener("mouseleave", (e) => {
   sliderGrabbed = false;
-  slider.style.cursor = "grab";
+  // slider.style.cursor = "grab";
 });
 slider.addEventListener("mousemove", (e) => {
   if (sliderGrabbed) {
@@ -136,7 +136,7 @@ dots.forEach((dot, idx) => {
 // dots 스크롤에 따른 각 색깔,모양 변경
 window.addEventListener("scroll", () => {
   dots.forEach((dot, idx) => {
-    const getSection = sections[idx].offsetTop - 100;
+    const getSection = sections[idx].offsetTop - 200;
     const scrollY = window.scrollY;
     if (scrollY >= getSection) {
       dots.forEach((dot) => {
@@ -155,4 +155,30 @@ window.addEventListener("scroll", () => {
   } else {
     dots[3].style.backgroundColor = "#d9d9d9";
   }
+});
+
+// 마우스 커서 변경
+const innerCursor = document.querySelector(".inner_cursor");
+const outerCursor = document.querySelector(".outer_cursor");
+
+document.addEventListener("mousemove", moveCursor);
+
+function moveCursor(e) {
+  let x = e.clientX;
+  let y = e.clientY;
+
+  innerCursor.style.left = `${x}px`;
+  innerCursor.style.top = `${y}px`;
+  outerCursor.style.left = `${x}px`;
+  outerCursor.style.top = `${y}px`;
+}
+const links = Array.from(document.querySelectorAll("a"));
+
+links.forEach((link) => {
+  link.addEventListener("mousemove", () => {
+    innerCursor.classList.add("grow");
+  });
+  link.addEventListener("mouseleave", () => {
+    innerCursor.classList.remove("grow");
+  });
 });

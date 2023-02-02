@@ -7,6 +7,7 @@ body {
     "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   /* 부드러운 스크롤 */
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 /* 스크롤바 */
@@ -23,6 +24,7 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: none;
 }
 
 /* main */
@@ -57,8 +59,8 @@ main .gnb li a {
   padding: 10px;
 }
 main .gnb li a:hover {
-  background-color: darkblue;
-  color: #feeb3a;
+  /* background-color: darkblue; */
+  color: #fff;
 }
 main .title .txt {
   text-align: center;
@@ -97,14 +99,14 @@ main .title .txt2 strong::after {
   display: block;
   position: absolute;
   width: 0;
-  height: 10px;
+  height: 13px;
   background-color: rgba(0, 0, 255, 0.6);
-  bottom: -7px;
+  bottom: -10px;
   left: 75%;
   transition: all 0.4s ease;
 }
 main .title .txt2 strong.active::after {
-  width: 105px;
+  width: 103px;
 }
 main .sub_title {
   position: absolute;
@@ -183,7 +185,7 @@ main .arrow {
   left: 30%;
   width: 60%;
   height: 500px;
-  cursor: grab;
+  /* cursor: grab; */
 }
 .project .slider_wrap .slider {
   position: absolute;
@@ -249,6 +251,8 @@ main .arrow {
 .skills {
   width: 100%;
   height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 .skills .skill_list li {
   margin-left: 500px;
@@ -404,4 +408,37 @@ main .arrow {
 .dots li.on {
   background-color: blue;
   transform: scale(1.5);
+}
+
+/* 마우스 커서 */
+.inner_cursor {
+  position: fixed;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  transform: translate(-50%, -50%);
+  background-color: #feeb3a;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transition: width 0.5s, height 0.5s;
+  z-index: 10;
+}
+.inner_cursor.grow {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  transition: width 0.5s, height 0.5s;
+}
+.outer_cursor {
+  position: fixed;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  transform: translate(-50%, -50%);
+  border: 1px solid #feeb3a;
+  mix-blend-mode: difference;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10;
 }
