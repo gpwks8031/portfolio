@@ -414,8 +414,8 @@ main .arrow {
 .inner_cursor {
   position: fixed;
   left: 10px;
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   transform: translate(-50%, -50%);
   background-color: #feeb3a;
   border-radius: 50%;
