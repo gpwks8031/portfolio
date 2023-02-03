@@ -59,8 +59,7 @@ main .gnb li a {
   padding: 10px;
 }
 main .gnb li a:hover {
-  /* background-color: darkblue; */
-  color: #fff;
+  color: #000;
 }
 main .title .txt {
   text-align: center;
@@ -167,7 +166,7 @@ main .arrow {
   font-size: 20px;
   margin-left: 95px;
   width: 180px;
-  height: 100px;
+  height: 80px;
 }
 .sub_gnb h3 span {
   color: blue;
@@ -254,15 +253,19 @@ main .arrow {
   position: relative;
   z-index: 1;
 }
-.skills .skill_list li {
+.skills .skill_list .skill_item {
   margin-left: 500px;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ddd;
   width: 70%;
   margin: 0 auto;
-  padding-bottom: 30px;
-  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  height: 8.7vw;
+}
+.skills .skill_list .none {
+  border-bottom: none;
 }
 .skills .skill_list li h3 {
   font-size: 40px;
@@ -417,7 +420,7 @@ main .arrow {
   width: 10px;
   height: 10px;
   transform: translate(-50%, -50%);
-  background-color: #feeb3a;
+  background-color: red;
   border-radius: 50%;
   mix-blend-mode: difference;
   pointer-events: none;
@@ -425,18 +428,18 @@ main .arrow {
   z-index: 10;
 }
 .inner_cursor.grow {
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
+  width: 25px;
+  height: 25px;
+  /* background-color: transparent; */
   transition: width 0.5s, height 0.5s;
 }
 .outer_cursor {
   position: fixed;
   left: 10px;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   transform: translate(-50%, -50%);
-  border: 1px solid #feeb3a;
+  border: 1px solid red;
   mix-blend-mode: difference;
   border-radius: 50%;
   pointer-events: none;
