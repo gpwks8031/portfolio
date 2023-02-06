@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="./common/minireset.min.css" />
     <!-- fonts -->
     <link rel="stylesheet" href="./styles/fonts.css" />
+    <!-- AOS 라이브러리 불러오기 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- 내가 작성한 css, js -->
     <link rel="stylesheet" href="./styles/sub.css" />
     <script defer src="./js/sub.js"></script>
@@ -23,30 +26,91 @@
       <main>
         <!-- gnb -->
         <ul class="gnb">
-          <li><a href="#">MAIN</a></li>
-          <li><a href="#">PROJECT</a></li>
-          <li><a href="#">SKILLS</a></li>
-          <li><a href="#">ABOUT</a></li>
+          <li><a href="./index.html">MAIN</a></li>
+          <li><a href="./index.html#project">PROJECT</a></li>
+          <li><a href="./index.html#skills">SKILLS</a></li>
+          <li><a href="./index.html#about">ABOUT</a></li>
         </ul>
+        <h1>포트폴리오 작업일지</h1>
         <div class="des">
-          <div class="img"></div>
-          <ul class="overview">
-            <li>
-              <h1>overview</h1>
-            </li>
-          </ul>
-          <ul class="development">
-            <li>
-              <h1>development review</h1>
-            </li>
-          </ul>
-          <ul class="review">
-            <li>
-              <h1>review</h1>
-            </li>
-          </ul>
+          <div data-aos="fade-up" data-aos-duration="3000">
+            <div class="overview">
+              <h2>overview</h2>
+              <h3>프로젝트 목표:</h3>
+              <p>
+                배운 것을 적용하여 프론트엔드 개발자가 되는 것이 현재
+                목표입니다.
+              </p>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" data-aos-duration="3000">
+            <div class="development">
+              <h2>development review</h2>
+              <h3>사용기술(css, Javascript)</h3>
+              <p>
+                <mark>AOS(Animate On Scroll Library)</mark>를 이용한 skillList에
+                생동감있는 움직임
+              </p>
+              <p>css와 cursor: none를 통한 <mark>mouser cursor</mark>변경</p>
+              <p>mouse cursor가 a태그 hover시 이벤트</p>
+              <p>스크롤에 따라 nav바 유무 이벤트</p>
+              <p><mark>setTimeout</mark>을 이용해 밑줄 효과 시간 조절</p>
+              <p>스크롤에 따른 dots 색깔 변경</p>
+              <p>dots 클릭하면 그 파트에 이동</p>
+              <p><mark>mouse grab</mark> 하면 슬라이드 이동</p>
+              <p><mark>clearTimeout</mark>을 이용해 typing effect 1번만 작동</p>
+
+              <h3 class="page">페이지 구성</h3>
+              <p><mark>main:</mark> 함축적인 자기소개</p>
+              <p>
+                <mark>project:</mark> 지금까지 했던 프로젝트 슬라이더로 구성
+              </p>
+              <p><mark>skills:</mark> 내가 할 수 있는 기술들 작성</p>
+              <p><mark>about:</mark> 자기소개 + contact할 수 있는 이메일</p>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" data-aos-duration="3000">
+            <div class="review">
+              <h2>review</h2>
+              <h3>문제점 및 해결과정</h3>
+              <h4>clearTimeout이 왜 작동하지 않을까?</h4>
+              <p>
+                처음엔 조건식으로 작성하지 않아서 안 되었다고 생각. 조건식으로
+                다시 작성해도 작동하지 않음.
+                <mark
+                  >변수 i를 typing 함수 내 선언 -> 밖에서 선언하니 작동</mark
+                >
+              </p>
+              <h4>
+                스크롤에 따라 dots가 파트마다 하나씩 색깔이 변경되어야 하는데 왜
+                이전 dot은 기본으로 안 돌아갈까?
+              </h4>
+              <p>
+                main dots가 파란색이고 project 파트에 오면 project dot이
+                파란색이 되고 main dot이 기본으로 다시 바뀌어야 하는데,
+                점차적으로 파란색만 늘어남.
+                <mark
+                  >if조건문에서 forEach를 이용해서 전체 dots를
+                  classList.remove하고 그 외는 idx값에 따라 classList.add를
+                  적용해 해결</mark
+                >
+              </p>
+              <h4>마우스 커서가 왜 안 보일까?</h4>
+              <p>
+                마우스 커서를 변경하려고 css와 js를 작성했으나 화면에 보이지
+                않음.
+                <mark>z-index값</mark>을 줘서 해결
+              </p>
+            </div>
+          </div>
         </div>
+        <a class="prev" href="./index.html">project로 돌아가기</a>
       </main>
     </div>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

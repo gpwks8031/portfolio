@@ -58,10 +58,10 @@ slider.addEventListener("mousemove", (e) => {
     slider.parentElement.scrollLeft -= e.movementX;
   }
 });
-// slider.addEventListener("wheel", (e) => {
-//   e.preventDefault();
-//   slider.parentElement.scrollLeft += e.delayY;
-// });
+slider.addEventListener("wheel", (e) => {
+  e.preventDefault();
+  slider.parentElement.scrollLeft += e.delayY;
+});
 function getScrollPercentage() {
   return (
     (slider.parentElement.scrollLeft /
@@ -70,11 +70,16 @@ function getScrollPercentage() {
   );
 }
 
+// const as = document.querySelectorAll(".item a");
+// as.addEventListener("click", (e) => {
+//   e.preventDefault();
+// });
+
 // about text 타이핑
 let text =
   "꾸준히 노력하고, 포기하지 않으며, 도전정신이 있는 프론트엔드 개발자";
 let i = 0;
-const about = document.querySelector(".about");
+const about = document.querySelector("#about");
 window.addEventListener("scroll", () => {
   const getAbout = about.offsetTop;
   const scrollY = window.scrollY;
