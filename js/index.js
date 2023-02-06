@@ -58,10 +58,10 @@ slider.addEventListener("mousemove", (e) => {
     slider.parentElement.scrollLeft -= e.movementX;
   }
 });
-slider.addEventListener("wheel", (e) => {
-  e.preventDefault();
-  slider.parentElement.scrollLeft += e.delayY;
-});
+// slider.addEventListener("wheel", (e) => {
+//   e.preventDefault();
+//   slider.parentElement.scrollLeft += e.delayY;
+// });
 function getScrollPercentage() {
   return (
     (slider.parentElement.scrollLeft /
@@ -69,11 +69,6 @@ function getScrollPercentage() {
     100
   );
 }
-
-// const as = document.querySelectorAll(".item a");
-// as.addEventListener("click", (e) => {
-//   e.preventDefault();
-// });
 
 // about text 타이핑
 let text =
