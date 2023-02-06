@@ -96,15 +96,15 @@ main .gnb li a:hover {
 main h1 {
   font-size: 2em;
   position: absolute;
-  top: 90px;
-  left: 40%;
+  top: 150px;
+  left: 10%;
   color: darkblue;
   font-weight: bold;
 }
 main .des {
   width: 70%;
   position: absolute;
-  top: 10%;
+  top: 15%;
   left: 10%;
   color: darkblue;
   line-height: 2;

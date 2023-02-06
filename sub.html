@@ -31,7 +31,10 @@
           <li><a href="./index.html#skills">SKILLS</a></li>
           <li><a href="./index.html#about">ABOUT</a></li>
         </ul>
-        <h1>포트폴리오 작업일지</h1>
+        <div data-aos="fade-up" data-aos-duration="3000">
+          <h1>포트폴리오 작업일지</h1>
+        </div>
+
         <div class="des">
           <div data-aos="fade-up" data-aos-duration="3000">
             <div class="overview">
@@ -47,27 +50,18 @@
           <div data-aos="fade-up" data-aos-duration="3000">
             <div class="development">
               <h2>development review</h2>
-              <h3>사용기술(css, Javascript)</h3>
+              <h3 class="page">페이지 구성</h3>
+              <h4>main</h4>
+              <p><mark>setTimeout</mark>을 이용해 밑줄 효과 시간 조절</p>
+              <h4>project</h4>
+              <p><mark>mouse grab</mark> 하면 슬라이드 이동</p>
+              <h4>skills</h4>
               <p>
                 <mark>AOS(Animate On Scroll Library)</mark>를 이용한 skillList에
                 생동감있는 움직임
               </p>
-              <p>css와 cursor: none를 통한 <mark>mouser cursor</mark>변경</p>
-              <p>mouse cursor가 a태그 hover시 이벤트</p>
-              <p>스크롤에 따라 nav바 유무 이벤트</p>
-              <p><mark>setTimeout</mark>을 이용해 밑줄 효과 시간 조절</p>
-              <p>스크롤에 따른 dots 색깔 변경</p>
-              <p>dots 클릭하면 그 파트에 이동</p>
-              <p><mark>mouse grab</mark> 하면 슬라이드 이동</p>
+              <h4>about</h4>
               <p><mark>clearTimeout</mark>을 이용해 typing effect 1번만 작동</p>
-
-              <h3 class="page">페이지 구성</h3>
-              <p><mark>main:</mark> 함축적인 자기소개</p>
-              <p>
-                <mark>project:</mark> 지금까지 했던 프로젝트 슬라이더로 구성
-              </p>
-              <p><mark>skills:</mark> 내가 할 수 있는 기술들 작성</p>
-              <p><mark>about:</mark> 자기소개 + contact할 수 있는 이메일</p>
             </div>
           </div>
 
@@ -88,25 +82,42 @@
                 이전 dot은 기본으로 안 돌아갈까?
               </h4>
               <p>
-                main dots가 파란색이고 project 파트에 오면 project dot이
+                main dots가 파란색인 상태에서 project 파트에 오면 project dot이
                 파란색이 되고 main dot이 기본으로 다시 바뀌어야 하는데,
                 점차적으로 파란색만 늘어남.
                 <mark
                   >if조건문에서 forEach를 이용해서 전체 dots를
                   classList.remove하고 그 외는 idx값에 따라 classList.add를
-                  적용해 해결</mark
-                >
+                  적용</mark
+                >해 해결
               </p>
               <h4>마우스 커서가 왜 안 보일까?</h4>
               <p>
                 마우스 커서를 변경하려고 css와 js를 작성했으나 화면에 보이지
-                않음.
+                않음. 알고보니 contents에 가려져서 보이지 않았음. ->
                 <mark>z-index값</mark>을 줘서 해결
+              </p>
+              <h4>슬라이드가 왜 옆으로 안 넘어갈까?</h4>
+              <p>
+                겉으로는 슬라이더의 형태이나 기능이 안 됨 ->
+                <mark
+                  >slider.addEventListener("mousemove", (e) => { if
+                  (sliderGrabbed) { slider.parentElement.scrollLeft -=
+                  e.movementX; } });
+                </mark>
+                이렇게 값을 주니 해결
+              </p>
+              <h4>skillList에서 각각 시간차 애니메이션</h4>
+              <p>
+                스크롤을 내리면 각각 시간차로 스르륵 나오길 바람. 스크롤에 따른
+                이벤트로 각각 시간을 다르게 줬더니 코드 어지러워보임 ->
+                <mark> AOS(Animate On Scroll Library)</mark>
+                를 사용해서 깔끔해보이게 함
               </p>
             </div>
           </div>
         </div>
-        <a class="prev" href="./index.html">project로 돌아가기</a>
+        <a class="prev" href="./index.html#project">project로 돌아가기</a>
       </main>
     </div>
     <script>
