@@ -41,8 +41,8 @@
               <h2>overview</h2>
               <h3>프로젝트 목표:</h3>
               <p>
-                배운 것을 적용하여 프론트엔드 개발자가 되는 것이 현재
-                목표입니다.
+                경험치들을 모아 실무에 배운 것을 적용할 수 있는 프론트엔드
+                개발자가 되는 것이 목표입니다.
               </p>
             </div>
           </div>
@@ -53,15 +53,24 @@
               <h3 class="page">페이지 구성</h3>
               <h4>main</h4>
               <p><mark>setTimeout</mark>을 이용해 밑줄 효과 시간 조절</p>
+              <p><mark>nav바에 메뉴</mark>를 클릭하면 그 파트로 이동</p>
+              <p>스크롤에 따른 <mark>dots 변화</mark></p>
+              <p><mark>dot을 클릭</mark>하면 그 순서의 파트로 이동</p>
               <h4>project</h4>
               <p><mark>mouse grab</mark> 하면 슬라이드 이동</p>
               <h4>skills</h4>
               <p>
-                <mark>AOS(Animate On Scroll Library)</mark>를 이용한 skillList에
+                <mark>AOS(Animate On Scroll Library)</mark>를 이용해 skillList에
                 생동감있는 움직임
               </p>
               <h4>about</h4>
               <p><mark>clearTimeout</mark>을 이용해 typing effect 1번만 작동</p>
+              <p>상단으로 돌아갈 수 있는 <mark>top버튼</mark></p>
+              <h4>마우스 커서</h4>
+              <p>
+                <mark>transition</mark>을 활용해 a태그 hover시 width값, height값
+                변경
+              </p>
             </div>
           </div>
 
@@ -72,7 +81,7 @@
               <h4>clearTimeout이 왜 작동하지 않을까?</h4>
               <p>
                 처음엔 조건식으로 작성하지 않아서 안 되었다고 생각. 조건식으로
-                다시 작성해도 작동하지 않음.
+                다시 작성해도 작동하지 않음
                 <mark
                   >변수 i를 typing 함수 내 선언 -> 밖에서 선언하니 작동</mark
                 >
@@ -84,7 +93,7 @@
               <p>
                 main dots가 파란색인 상태에서 project 파트에 오면 project dot이
                 파란색이 되고 main dot이 기본으로 다시 바뀌어야 하는데,
-                점차적으로 파란색만 늘어남.
+                점차적으로 파란색만 늘어남 ->
                 <mark
                   >if조건문에서 forEach를 이용해서 전체 dots를
                   classList.remove하고 그 외는 idx값에 따라 classList.add를
