@@ -98,16 +98,15 @@ main h1 {
   position: absolute;
   top: 150px;
   left: 10%;
-  /* color: darkblue; */
   font-weight: bold;
 }
 main .des {
   width: 70%;
-  position: absolute;
   top: 12%;
   left: 10%;
   color: darkblue;
   line-height: 2;
+  position: absolute;
 }
 main .des h2 {
   font-size: 1.5em;
