@@ -216,17 +216,42 @@ main .arrow {
   flex-wrap: wrap;
   flex-direction: column;
   width: 700px;
-  height: 98%;
-  top: 1%;
+  height: 500px;
   background-color: darkblue;
+}
+#project .slider_wrap .slider .slider_inner .bg_wt {
+  background-color: #fff;
+}
+#project .slider_wrap .slider .slider_inner .bg_bk {
+  background-color: #161616;
+}
+#project .slider_wrap .slider .slider_inner .item img {
+  position: absolute;
+  top: 10%;
 }
 #project .slider_wrap .slider .slider_inner .item h3 {
   color: #ffeb3c;
   margin-bottom: 30px;
   font-size: 24px;
+  position: absolute;
+  top: 35%;
 }
 #project .slider_wrap .slider .slider_inner .item p {
   color: #fff;
+  position: absolute;
+  top: 45%;
+}
+#project .slider_wrap .slider .slider_inner .item a {
+  position: absolute;
+  bottom: 2%;
+  width: 250px;
+  height: 50px;
+  background-color: #ffeb3c;
+  color: blue;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
 }
 #project .slider_wrap .progress_bar {
   position: absolute;
