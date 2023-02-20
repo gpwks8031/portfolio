@@ -219,31 +219,22 @@ main .arrow {
   height: 500px;
   background-color: darkblue;
 }
-#project .slider_wrap .slider .slider_inner .bg_wt {
-  background-color: #fff;
-}
-#project .slider_wrap .slider .slider_inner .bg_bk {
-  background-color: #161616;
-}
-#project .slider_wrap .slider .slider_inner .item img {
-  position: absolute;
-  top: 10%;
-}
+
 #project .slider_wrap .slider .slider_inner .item h3 {
   color: #ffeb3c;
   margin-bottom: 30px;
-  font-size: 24px;
+  font-size: 30px;
   position: absolute;
-  top: 35%;
+  top: 30%;
 }
 #project .slider_wrap .slider .slider_inner .item p {
   color: #fff;
   position: absolute;
-  top: 45%;
+  top: 40%;
 }
 #project .slider_wrap .slider .slider_inner .item a {
   position: absolute;
-  bottom: 2%;
+  top: 50%;
   width: 250px;
   height: 50px;
   background-color: #ffeb3c;

@@ -121,7 +121,7 @@ main .img {
 }
 main .des {
   width: 70%;
-  top: 37%;
+  top: 35%;
   left: 10%;
   line-height: 2;
   position: absolute;
@@ -170,7 +170,7 @@ main .go {
   color: #000;
   position: absolute;
   bottom: 3%;
-  right: 10%;
+  left: 10%;
 }
 main .go:hover {
   background-color: #000;

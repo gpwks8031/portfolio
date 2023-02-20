@@ -102,7 +102,7 @@ main h1 {
 }
 main .des {
   width: 70%;
-  top: 12%;
+  top: 10%;
   left: 10%;
   color: darkblue;
   line-height: 2;
@@ -151,7 +151,7 @@ main .des .review h3 {
   margin-top: 30px;
 }
 main .des .review p {
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 main .prev {
   width: 200px;
@@ -162,7 +162,7 @@ main .prev {
   color: #000;
   position: absolute;
   bottom: 3%;
-  right: 8%;
+  left: 10%;
 }
 main .prev:hover {
   background-color: #000;
