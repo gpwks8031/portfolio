@@ -12,6 +12,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,116 +20,69 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <!-- AOS 라이브러리 불러오기 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- 내가 작성한 css, js -->
-    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/styleM.css" />
+    <link rel="stylesheet" media="(min-width:768px)" href="./styles/styleTablet.css">
+    <link rel="stylesheet" media="(min-width:1280px)" href="./styles/stylePC.css">
+    <script defer src="./js/index.js"></script>
   </head>
   <body>
     <header>
-      <div class="contents">
-        <h1 class="logo">
+      <nav class="navbar">
+        <div class="navbar_logo">
           <a href="#">logo</a>
-        </h1>
-        <nav>
-          <ul class="header_menu">
-            <li>
-              <a href="#">교육과정</a>
-              <ul class="sub_menu">
-                <li><a href="#">교육과정안내</a></li>
-                <li><a href="#">교육프로그램</a></li>
-                <li><a href="#">교육신청</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">기록과 기억</a>
-              <ul class="sub_menu">
-                <li><a href="#">단원고 4.16 기억교실</a></li>
-                <li><a href="#">온라인 기억교실</a></li>
-                <li><a href="#">기억교실 방문</a></li>
-                <li><a href="#">기억노트</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">소식과 자료</a>
-              <ul class="sub_menu">
-                <li><a href="#">웹진 바람대로</a></li>
-                <li><a href="#">공지사항</a></li>
-                <li><a href="#">자료실</a></li>
-                <li><a href="#">정보공개</a></li>
-                <li><a href="#">기억과 공감의 날</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">교육원 소개</a>
-              <ul class="sub_menu">
-                <li><a href="#">인사말</a></li>
-                <li><a href="#">설립과정</a></li>
-                <li><a href="#">운영방향</a></li>
-                <li><a href="#">교육원 BI</a></li>
-                <li><a href="#">조직 및 업무</a></li>
-                <li><a href="#">시설안내</a></li>
-                <li><a href="#">찾아오시는 길</a></li>
-              </ul>
-            </li>
-          </ul>
-          <div class="sns phone_only">
-            <ul>
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                  <path
-                    d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
-                  />
-                </svg>
-              </li>
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                  <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                  <path
-                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                  />
-                </svg>
-              </li>
-              <!-- <li><a href="#">네이버 블로그</a></li> -->
-              <li>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                  <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                  <path
-                    d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
-                  />
-                </svg>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <div class="sub_bg"></div>
-        <div class="util">
-          <div class="resize">
-            <button>
-              <span class="material-symbols-outlined"> remove </span>
-            </button>
-            <span class="word">가</span>
-            <button>
-              <span class="material-symbols-outlined"> add </span>
-            </button>
-          </div>
-          <ul class="lang">
-            <li><a href="#">KOR</a></li>
-            <li><a href="#">ENG</a></li>
-          </ul>
-          <img src="./images/magnifying-glass-solid.svg" alt="돋보기 아이콘" />
-          <div class="gnb_all">
-            <span></span>
-            <span></span>
-          </div>
         </div>
-      </div>
+
+        <ul class="navbar_menu">
+          <li><a href="#">교육과정</a></li>
+          <li><a href="#">기록과 기억</a></li>
+          <li><a href="#">소식과 자료</a></li>
+          <li><a href="#">교육원 소개</a></li>
+        </ul>
+        <!-- 모바일 메뉴버튼 -->
+        <a href="#" id="toggle_btn"><span class="material-symbols-outlined">
+          menu
+          </span></a>
+
+        <div class="navbar_box">
+          <div class="navbar_words">
+            <a href="#"><span class="material-symbols-outlined">
+              add
+              </span></a>
+            <span>가</span>
+            <a href="#"><span class="material-symbols-outlined">
+              remove
+              </span></a>
+          </div>
+  
+          <ul class="navbar_lang">
+            <li><a href="#" class="line">KOR</a></li>
+            <li><a href="#" class="grey">ENG</a></li>
+          </ul>
+  
+          <ul class="navbar_icons">
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></li>
+          </ul>
+        </div>
+      </nav>
     </header>
+
     <main>
-      <!-- <div class="go_up">
-      <a href="#"><span class="material-symbols-outlined">
-        arrow_upward
-        </span></a>
-    </div> -->
+      <div class="go_up">
+        <a href="#"
+          ><span class="material-symbols-outlined"> arrow_upward </span></a
+        >
+      </div>
       <div class="container">
         <section class="box1">
           <div class="full_in">
@@ -137,15 +91,14 @@
             </div>
             <div class="right_wrap">
               <div class="text_box">
-                <ul>
-                  <li><p>기억을 넘어</p></li>
-                  <li><p>희망을 품다</p></li>
-                </ul>
-                <p>
+                <div id="typing"></div>
+                <div data-aos="fade-up" data-aos-duration="3000">
+                  <p class="text">
                   참사의 아픔을 공감하고 기억하는 문화를 확신하고<br />
-                  참여와 연대로 실천하는 민주시민교육으로<br />
-                  희망을 함께 그리며 나아가는 경기도교육청 직속기관입니다.
-                </p>
+                  참여와 연대로 실천하는 민주시민교육으로 희망을<br />
+                  함께 그리며 나아가는 경기도교육청 직속기관입니다.
+                  </p>
+                </div>
                 <div class="btn_box">
                   <a href="#">
                     <span>자세히 보기</span>
@@ -168,21 +121,62 @@
                 <div class="title_box">
                   <h2>기록과 기억</h2>
                   <p>
-                    세월호 참사와 참사로 희생된 이들의 꿈을 기억하고,<br />
+                    세월호 참사와 참사로 희생된 이들의 꿈을 기억하고,
                     기억과 기록의 가치에 대해 함께 생각합니다.
                   </p>
                 </div>
-                <div class="slide">
-                  <div class="swiper"></div>
-                </div>
-                <a href="#">
+                <a href="#" class="more">
                   <p>더보기</p>
-                  <div>
+                  <div class="more_arrow">
                     <span class="material-symbols-outlined">
                       arrow_right_alt</span
                     >
                   </div>
                 </a>
+              </div>
+              <div class="slide">
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                  <div class="swiper-pagination"></div>
+                  <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 512"
+                  >
+                <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z"
+                />
+                </svg>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="slide_img">
+                        <img src="./images/main-memory-1.jpg" alt="slide1" />
+                      </div>
+                      <div class="slide_txt">
+                        <strong>기억교실은 365일 개방중입니다.</strong>
+                        <p>평일 9시 ~ 18시 / 주말 10시 ~ 17시</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="slide_img">
+                        <img src="./images/main-memory-2.jpg" alt="slide2" />
+                      </div>
+                      <div class="slide_txt">
+                        <strong>온라인 기억교실</strong>
+                        <p>끝까지 기억하겠습니다.</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="slide_img">
+                        <img src="./images/main-memory-3.jpg" alt="slide3" />
+                      </div>
+                      <div class="slide_txt">
+                        <strong>기억노트</strong>
+                        <p>우리의 다짐과 그리움의 편지가 너에게 닿기를</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <a href="#" class="phone_only">더보기</a>
               <div class="main_bg"></div>
@@ -191,62 +185,237 @@
         </section>
 
         <section class="box3">
-          <div class="edu">
-            <div class="slide">
-              <div class="swiper"></div>
-            </div>
-            <div class="contents">
-              <div class="txt_wrap">
-                <div class="edu_txt">
-                  <div class="title_box"></div>
-                  <div class="swiper_btn"></div>
-                  <a href="#">
+          <div class="contents">
+            <div class="txt_wrap">
+              <div data-aos="fade-up" data-aos-duration="3000">
+                <div class="txt">
+                  <div class="title_box">
+                    <h2>교육프로그램</h2>
+                    <p>민주사회를 만들기 위한 교육에 참여해보세요.</p>
+                  </div>
+                  <a href="#" class="more">
                     <p>더보기</p>
-                    <div>
+                    <div class="more_arrow">
                       <span class="material-symbols-outlined">
-                        arrow_right_alt</span
-                      >
+                      arrow_right_alt</span>
                     </div>
                   </a>
                 </div>
               </div>
             </div>
-            <div class="contents">
-              <a href="#" class="phone_only">더보기</a>
+
+            <div data-aos="fade-up" data-aos-duration="2000">
+            <div class="slide">
+              <div class="swiper mySwiper2">
+                <div class="swiper-pagination"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                  <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z"
+                  />
+                </svg>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <span>신청예정</span>
+                    <div class="slide_img">
+                      <img
+                        src="./images/listImgFile_1656910016_0.jpg"
+                        alt="생명존중과 안전"
+                      />
+                    </div>
+                    <div class="slide_txt">
+                      <strong>[초등 교육원 방문형] 생명존중과 안전</strong>
+                      <p>2023. 02. 21 ~ 06. 01</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <span>신청예정</span>
+                    <div class="slide_img">
+                      <img
+                        src="./images/listImgFile_1656499231_0.jpg"
+                        alt="학생대상교육3_전참시"
+                      />
+                    </div>
+                    <div class="slide_txt">
+                      <strong>[초등, 학교로 찾아가는 교육] 전·참·시</strong>
+                      <p>2023. 02. 21 ~ 06. 01</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <span>신청예정</span>
+                    <div class="slide_img">
+                      <img
+                        src="./images/listImgFile_1656495291_0.jpg"
+                        alt="학생대상교육3_전참시"
+                      />
+                    </div>
+                    <div class="slide_txt">
+                      <strong>[초등, 학교로 찾아가는 교육] 전·참·시</strong>
+                      <p>2023. 02. 21 ~ 06. 01</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <span>신청예정</span>
+                    <div class="slide_img">
+                      <img
+                        src="./images/listImgFile_1645076823_0.jpg"
+                        alt="학부모시민대상교육11_청사담과정_정정당당"
+                      />
+                    </div>
+                    <div class="slide_txt">
+                      <strong>[초등, 방문형] 정정당당</strong>
+                      <p>2023. 02. 21 ~ 06. 01</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <span>신청예정</span>
+                    <div class="slide_img">
+                      <img
+                        src="./images/listImgFile_1645073737_0.jpg"
+                        alt="학생대상교육5_기본권을아는것이 기본"
+                      />
+                    </div>
+                    <div class="slide_txt">
+                      <strong
+                        >[초등, 학교로 찾아가는] 기본권을 아는 것이
+                        기본!</strong
+                      >
+                      <p>2023. 02. 21 ~ 06. 01</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <a href="#" class="phone_only">더보기</a>
           </div>
+        </div>
         </section>
 
         <section class="box4">
           <div class="contents">
             <ul class="slide">
+              <div data-aos="fade-up" data-aos-duration="3000">
               <li>
-                <div class="flex">
+                <div class="title_box">
                   <h2>웹진 바람대로</h2>
-                  <div class="swiper">pagination</div>
                 </div>
-                <div class="swiper"></div>
+                <div class="swiper mySwiper2">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img
+                        src="./images/mainFiles_1669771526_0.jpg"
+                        alt="바람대로1"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./images/mainFiles_1669771540_0.jpg"
+                        alt="바람대로2"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./images/mainFiles_1669771553_0.jpg"
+                        alt="바람대로3"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./images/mainFiles_1669771562_0.jpg"
+                        alt="바람대로4"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./images/mainFiles_1669771570_0.jpg"
+                        alt="바람대로5"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./images/mainFiles_1669771579_0.jpg"
+                        alt="바람대로6"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./images/mainFiles_1669771588_0.jpg"
+                        alt="바람대로"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./images/mainFiles_1669771597_0.jpg"
+                        alt="바람대로"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./images/mainFiles_1669771605_0.jpg"
+                        alt="바람대로"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./images/mainFiles_1672187300_0.jpg"
+                        alt="바람대로"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
               </li>
+              </div>
+              <div data-aos="fade-up" data-aos-duration="3000">
               <li>
-                <div class="flex">
+                <div class="title_box">
                   <h2>팝업존</h2>
-                  <div class="swiper">pagination</div>
                 </div>
-                <div class="swiper"></div>
+                <div class="swiper mySwiper3">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img
+                        src="./images/imgFile_1644467771_0.jpg"
+                        alt="튀르키예 지진 참사 애도"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./images/imgFile_1657155812_0.jpg"
+                        alt="미래희망관 시설 대관 안내"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./images/imgFile_1676594339_0.jpg"
+                        alt="기억교실 국가기록물 지정"
+                      />
+                    </div>
+                    <div class="swiper-slide">
+                      <img
+                        src="./images/imgFile_1676594935_0.jpg"
+                        alt="청시민교육과정 유네스코지속발전교육 인증 취득"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
               </li>
+            </div>
             </ul>
           </div>
         </section>
 
         <section class="box5">
           <div class="contents">
-            <div class="flex">
+            <div data-aos="fade-up" data-aos-duration="3000">
+            <div class="title_box">
               <h2>소식과 자료</h2>
               <a href="#">
                 <span class="material-symbols-outlined"> arrow_right_alt</span>
               </a>
             </div>
-            <ul>
+            <ul class="board">
               <li>
                 <a href="#">
                   <div class="board_txt">
@@ -261,7 +430,7 @@
                       &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;주말
                       10:00~12:00, 14:00~16:00 장소: 4.16민주시민교육원(경기...
                     </p>
-                    <span>2023.02.17</span>
+                    <span class="board_day">2023.02.17</span>
                   </div>
                   <div class="board_mark pc_only">
                     <span class="material-symbols-outlined"> add </span>
@@ -282,7 +451,7 @@
                       개방 하여 운영하고자 하오니 많은 이용 바랍니다. 가.
                       개방시간: 평일(월요일~금요일) 9:00 ~ 21:00(...
                     </p>
-                    <span>2023.02.16</span>
+                    <span class="board_day">2023.02.16</span>
                   </div>
                   <div class="board_mark pc_only">
                     <span class="material-symbols-outlined"> add </span>
@@ -297,7 +466,7 @@
                       <strong>아홉번째 노란 이야기 전시 안내</strong>
                     </h3>
                     <p></p>
-                    <span>2023.02.08</span>
+                    <span class="board_day">2023.02.08</span>
                   </div>
                   <div class="board_mark pc_only">
                     <span class="material-symbols-outlined"> add </span>
@@ -312,7 +481,7 @@
                       <strong>2023 기억 희망 그림 사생대회 참가 안내</strong>
                     </h3>
                     <p>2023 기억 희망 그림 사생대회 참가 안내</p>
-                    <span>2023.01.26</span>
+                    <span class="board_day">2023.01.26</span>
                   </div>
                   <div class="board_mark pc_only">
                     <span class="material-symbols-outlined"> add </span>
@@ -320,6 +489,7 @@
                 </a>
               </li>
             </ul>
+          </div>
           </div>
           <div class="main_bg2"></div>
         </section>
@@ -329,17 +499,19 @@
       <div class="footer_top">
         <div class="contents">
           <p>관련기관</p>
-          <div class="slide">
-            <div class="swiper"></div>
-          </div>
+          <ul class="footer_list">
+              <li>안산시청</li>
+              <li>단원고등학교</li>
+              <li>...</li>
+            </ul>
         </div>
       </div>
       <div class="footer_mid">
         <div class="contents">
           <ul class="footer_link">
-            <li><button>개인정보처리방침</button></li>
-            <li><button>저작권 정책</button></li>
-            <li><button></button>사이트맵</li>
+            <li class="line1">개인정보처리방침</li>
+            <li class="line2">저작권 정책</li>
+            <li>사이트맵</li>
           </ul>
           <ul class="footer_sns">
             <li>
@@ -353,25 +525,22 @@
               </a>
             </li>
             <li>
-              <a href="#"
-                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                  <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                  <path
-                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                  /></svg
-              ></a>
-            </li>
-          </ul>
-          <li>
-            <a href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                 <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                 <path
-                  d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+                  d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
                 />
               </svg>
-            </a>
-          </li>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+              <path
+                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+              />
+              </svg>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="footer_bottom">
@@ -392,17 +561,21 @@
               </p>
               <span>&copy; 4.16민주시민교육원</span>
             </div>
+            <ul class="mark">
+              <li>
+                <a href="#"><img src="./images/WA2021_winner.svg" alt="logo" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="./images/open.png" alt="logo" /></a>
+              </li>
+            </ul>
           </div>
+          
         </div>
-        <ul class="mark">
-          <li>
-            <a href="#"><img src="./images/WA2021_winner.svg" alt="logo" /></a>
-          </li>
-          <li>
-            <a href="#"><img src="./images/open.png" alt="logo" /></a>
-          </li>
-        </ul>
       </div>
     </footer>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
